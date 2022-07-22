@@ -64,7 +64,7 @@ public class GUIClienteController {
 			modelAndView.setViewName("cadastrarCliente");
 		} else {
 			if (servico.save(cliente).isPresent()) {
-				logger.info(">>>>>> controller chamou cadastrar e consulta todos");
+				logger.info(">>>>>> controller chamou adastrar e consulta todos");
 				modelAndView.addObject("clientes", servico.consultaTodos());
 			} else {
 				logger.info(">>>>>> controller cadastrar com dados invalidos");

@@ -41,11 +41,11 @@ public class MantemClienteI implements MantemCliente {
 	
 		if (umCliente.isEmpty() & endereco != null) {
 				logger.info(">>>>>> servico save - dados validos");
-				cliente.obtemDataAtual(new DateTime());
+				cliente.setDataCadastro(new DateTime());
 				cliente.setEndereco(endereco.getLogradouro());
-                                                                                               return Optional.ofNullable(repository.save(cliente));
+                return Optional.ofNullable(repository.save(cliente));
  		} else {
-		            return Optional.empty();
+		        return Optional.empty();
 		}
 		
 	}
